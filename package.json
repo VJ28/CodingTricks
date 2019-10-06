@@ -1,0 +1,61 @@
+{
+  "name": "codingtricks",
+  "version": "1.0.0",
+  "description": "A platform for coding tricks, guides and effective way of doing things related to html, css, programming.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/server.js",
+    "build": "webpack -wd --watch",
+    "sass": "node-sass -w sass/ -o css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VJ28/CodingTricks.git"
+  },
+  "keywords": [
+    "coding",
+    "tricks",
+    "html",
+    "tricks",
+    "css",
+    "tricks",
+    "programming",
+    "html5",
+    "css3",
+    "learn",
+    "to",
+    "code"
+  ],
+  "author": "Vijay Mourya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VJ28/CodingTricks/issues"
+  },
+  "homepage": "https://github.com/VJ28/CodingTricks#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "mongoose": "^5.7.3",
+    "node-sass": "^4.12.0",
+    "react-router-dom": "^5.1.2",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  }
+}
