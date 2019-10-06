@@ -9,7 +9,7 @@ const dbRoute = "mongodb+srv://vijay:vijaymourya@cluster0-nsvjo.mongodb.net/test
 app.use(compression());
 app.use(express.static("dist/public"));
 
-moongoose.connect(dbRoute, {useNewUrlParser: true});
+moongoose.connect(dbRoute, {useUnifiedTopology: true, useNewUrlParser: true});
 const db = moongoose.connection;
 db.once('open', () => console.log('connected to the database'));
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));

@@ -1,0 +1,67 @@
+Title: Let's explore webpack and how to configure it
+
+Description:
+
+Webpack is primarily known to be used as module bundler. But along with bundling it can also be used for code splitting, lazy loading, and other optimisations.
+You can explore webpack more <a href="https://webpack.js.org/">here</a>.
+
+Configuration:
+First we need to understand the  structure of config file. It included entry, output, module, resolve, plugins
+
+entry: It can be a single or multiple entry points. 
+eg.
+    entry: {
+        vendor: ["react"],
+        app: ["./src/client.js"] -- starting point of an app
+    }
+
+output: Specifies the destination to build project. It expects pathname, filename
+eg.
+    output: {
+        path: path.resolve(__dirname, "public"), -- destination
+        filename: "[name].js" -- bundle name
+    }
+
+module: It expect single or array of rules. Thereby rules expects few properties like 
+    test: regex to match file format
+    use: here we specify the loaders to transpile the code. Basically they transform your code so that browser can understand it. Presets are basically the configuration require by the loaders.
+    include: specifies the folder to be included
+    exclude: to exclude the specified folder/file
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ["@babel/preset-env", "@babel/preset-react"]
+                    }
+                },
+                exclude: /node_modules/,
+            },
+            { 
+                test: /\.scss$/,
+                include: [
+                    path.resolve(__dirname, "src/styles")
+                ],             
+                use: [
+                     { loader: "style-loader" },
+                     { loader: "css-loader" },
+                     { loader: "sass-loader" }
+                ]
+            }
+        ]
+    }
+
+plugins: To process css or html or any other dependencies we need to specify the supporting plugins.
+
+eg.
+    plugins: [
+        new MiniCssExtractPlugin({
+        filename: "[name].css"
+        }),
+        new HtmlWebPackPlugin({
+        template: "./src/index.html", -- refers the template to be used
+        filename: "./index.html" -- creates file with the specified name
+        })
+    ]

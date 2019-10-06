@@ -6,7 +6,7 @@ class NavBar extends React.Component{
     }
 
     handleClick(){
-        document.getElementById("nav-bar__ul").classList.toggle("hide");
+        document.getElementById("nav-bar__ul").classList.toggle("show");
     }
 
     render(){
@@ -15,7 +15,7 @@ class NavBar extends React.Component{
                 <div onClick={()=> this.handleClick()} className="nav-btn">
                     Menu
                 </div>
-                <ul id="nav-bar__ul" className="hide">
+                <ul id="nav-bar__ul">
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/blogs/">Blogs</Link></li>
                 <li><Link to="/ask/">Ask Questions</Link></li>

@@ -1,0 +1,71 @@
+Title: CSS counter
+Description:
+Css counters provides an faster way to mark sections, subsections.
+This article will guide on how to use counters in css with use cases.
+
+The ordinary way is to use ordered list i.e <ol></ol>
+
+<ol>
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+</ol>
+
+CSS Counter:
+
+There are few properties:
+counter-reset: <countername> -> to be set on parent Element
+
+counter-increment: <countername> -> to be set on incrementing Element
+content: counter(countername) -> to be set on incrementing Element
+
+Example 1:
+```<div>
+    <h2>First</h2>
+    <h2>Second</h2>
+    <h2>Third</h2>
+</div>
+
+<style>
+    div{
+        counter-reset: firstCounter;
+    }
+    h2:before{
+        counter-increment: firstCounter;
+        content: counter(firstCounter) ":" ;
+    }
+</style>```
+
+Example 1:
+```
+<div>
+<h1>First Section</h1>
+    <h2>First</h2>
+    <h2>Second</h2>
+    <h2>Third</h2>
+<h1>Second Section</h1>
+    <h2>First</h2>
+    <h2>Second</h2>
+    <h2>Third</h2>
+<h1>Third Section</h1>
+    <h2>First</h2>
+    <h2>Second</h2>
+    <h2>Third</h2>
+</div>
+
+<style>
+    div{
+        counter-reset: firstCounter
+    }
+    h1{
+        counter-reset: secondCounter;
+    }
+    h1:before{
+        counter-increment: firstCounter;
+        content: counter(firstCounter) ":" ;
+    }
+    h2:before{
+        counter-increment: secondCounter;
+        content: counter(firstCounter) "." counter(secondCounter) ":" ;
+    }
+</style>```
