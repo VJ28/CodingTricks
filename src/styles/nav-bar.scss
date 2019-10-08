@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 a{
     text-decoration: none;
@@ -7,7 +9,6 @@ a{
 #nav-bar {
     ul{
         list-style: none;
-        padding: 0px;
         li{
             padding: 15px 10px;
             a{
@@ -18,31 +19,63 @@ a{
 }
 
 @media screen and (max-width:768px){
+    .body-container{
+        position: relative;
+        top: 60px;
+        background-color: yellowgreen;
+    }
     #nav-bar {
+        position: absolute;
+        z-index: 10000;
+        width: 100%;
         ul{
-            display: none;
-            margin: 0px;
+            height: 0;
+            overflow: hidden;
+            transition: height 600ms ease-out;
+            background-color: greenyellow;
             li{
                 width: 100%;
-                background-color: skyblue;
+                border-bottom: yellowgreen;
             }
             &.show{
-                display: block;
+                height: 250px;
             }
         }
-        .nav-btn{
-            padding: 15px 10px;
-            background-color: blanchedalmond;
-            a ul {
-                display: block;
+        .header-bar{
+            background-color: yellowgreen;
+            .nav-btn{
+                padding: 7px 10px;
+                position: absolute;
+                .hamburger-line {
+                    width: 35px;
+                    height: 5px;
+                    background-color: black;
+                    margin: 6px 0;
+                }
+            }
+            .app_title{
+                text-align: center;
+                padding: 15px;
+                font-size: 20px;
             }
         }
     }
 }
 
 @media screen and (min-width: 768px){
+    .body-container{
+        clear: both;
+    }
     #nav-bar {
+        .header-bar{
+            float: left;
+            .app_title{
+                padding: 10px 20px;
+                font-size: 30px;
+            }
+        }
         ul {
+            float: right;
             li{
                 display: inline-block;
                 padding-right: 0px;
@@ -55,8 +88,17 @@ a{
                 }
             }
         }
-        .nav-btn{
+        .nav-btn, .app_title{
             display: none;
         }
     }
+}
+.footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    background-color: black;
+    color: silver;
 }

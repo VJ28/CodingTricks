@@ -10,7 +10,9 @@ class App extends React.Component{
         return (
             <>
             <NavBar/>
+            <section className="body-container">
             <AppRoute/>
+            </section>
             </>
         )
     }

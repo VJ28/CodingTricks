@@ -29,14 +29,21 @@ const config = {
                 ],             
                 use: [
                      { loader: "style-loader" },
+                     { loader: MiniCssExtractPlugin.loader },
                      { loader: "css-loader" },
                      { loader: "sass-loader" }
                 ]
+            },
+            {
+                test: /\.jpg$/,
+                use: [{
+                    loader: 'url-loader'
+                }]
             }
         ]
     },
     resolve: {
-        extensions: [".js", ".jsx", ".json", ".scss"]
+        extensions: [".js", ".jsx", ".json"]
     },
     plugins: [
         new MiniCssExtractPlugin({

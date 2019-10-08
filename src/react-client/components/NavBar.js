@@ -11,9 +11,15 @@ class NavBar extends React.Component{
 
     render(){
         return(
+            <>
             <section id="nav-bar">
-                <div onClick={()=> this.handleClick()} className="nav-btn">
-                    Menu
+                <div onClick={()=> this.handleClick()} className="header-bar">
+                    <div className="nav-btn">
+                        <div className="hamburger-line"></div>
+                        <div className="hamburger-line"></div>
+                        <div className="hamburger-line"></div>
+                    </div>
+                    <div className="app_title">Coding Tricks</div>
                 </div>
                 <ul id="nav-bar__ul">
                 <li><Link to="/">Home</Link></li>
@@ -23,6 +29,10 @@ class NavBar extends React.Component{
                 <li><Link to="/adminPage">AdminPage</Link></li>
                 </ul>
             </section>
+            <section className="footer">
+                &copy; 2019 Made by Vijay Mourya.
+            </section>
+            </>
         )
     }
 }

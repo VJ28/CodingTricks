@@ -1,0 +1,30 @@
+h1{
+    font-family: cursive;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 20px;
+}
+h2{
+    text-align: center;
+    padding: 20px 10px 10px;
+    font-size: 24px;
+    font-family: cursive;
+}
+.section--intro{
+    padding: 10px 10px 30px;
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+    z-index: 10;
+}
+.section--aboutus{
+    border-radius: 125px 0px;
+    background-color: slategray;
+    .list--aboutus div{
+        padding: 10px 20px;
+        font-size: 20px;
+        &:before{
+            content: "- ";
+        }
+    }
+}

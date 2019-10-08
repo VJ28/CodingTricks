@@ -5,7 +5,11 @@ const DataSchema = new Schema(
     {
         id: Number,
         title: String,
-        description: String
+        description: String,
+        author: String,
+        publishedTime: Date,
+        views: Number,
+        likes: Number,
     },
     {timestamps: true}
 );
