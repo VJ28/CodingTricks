@@ -10,13 +10,13 @@ class AppRoute extends React.Component{
 
     render(){
         return(
-                <Switch>
-                <Route exact path="/" component={HomePage} />
-                <Route path="/blogs" component={BlogsPage} />
-                <Route path="/contactus" component={Contact} />
-                <Route path="/ask" component={QAPage}/>
-                <Route path="/adminPage" component={Admin} />
-                </Switch>
+            <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route path="/blogs" component={BlogsPage} />
+            <Route path="/contactus" component={Contact} />
+            <Route path="/ask" component={QAPage}/>
+            <Route path="/adminPage" component={Admin} />
+            </Switch>
         );
     }
 }

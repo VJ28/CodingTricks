@@ -6,11 +6,15 @@ router.get("/", async (req, res) => {
     ssrTemplate(req,res);
 });
 
+router.get("/blogs", async (req, res) => {
+    ssrTemplate(req,res);
+});
+
 router.get("/ask", async (req, res) => {
     ssrTemplate(req,res);
 });
 
-router.get("/contactUs", async (req, res) => {
+router.get("/contactus", async (req, res) => {
     ssrTemplate(req,res);
 });
 
