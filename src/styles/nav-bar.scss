@@ -67,6 +67,9 @@ a{
         clear: both;
     }
     #nav-bar {
+        overflow: auto;
+        background-color: yellowgreen;
+        color: cornsilk;
         .header-bar{
             float: left;
             .app_title{
