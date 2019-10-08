@@ -7,8 +7,15 @@ const config = {
         app: ["./src/client.js"]
     },
     output: {
-        path: path.resolve(__dirname, "dist/public"),
-        filename: "[name].js"
+        path: path.resolve(__dirname, "dist/public/"),
+        publicPath: "/",
+        chunkFilename: "[name].js",
+        filename: "[name].js",
+    },
+    optimization: {
+        splitChunks: {
+        chunks: 'all',
+        },
     },
     module: {
         rules: [

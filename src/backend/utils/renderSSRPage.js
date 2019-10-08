@@ -18,6 +18,9 @@ export function ssrTemplate(req, res){
         <body>
         <div id="root">${reactComp}</div>
         </body>
+        <script src="/vendor.js"></script>
+        <script src="/vendors~app.js"></script>
+        <script src="/vendors~app~vendor.js"></script>
         <script src="/app.js" charset="utf-8"></script>
     </html>`);
 }

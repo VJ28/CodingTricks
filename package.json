@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec babel-node src/server.js",
-    "build": "webpack -wd --watch",
+    "build": "webpack -wd --mode-production --watch",
     "sass": "node-sass -w sass/ -o css/"
   },
   "repository": {
@@ -33,6 +33,8 @@
   },
   "homepage": "https://github.com/VJ28/CodingTricks#readme",
   "dependencies": {
+    "@loadable/component": "^5.10.3",
+    "@loadable/server": "^5.10.3",
     "compression": "^1.7.4",
     "express": "^4.17.1",
     "react": "^16.10.2",
