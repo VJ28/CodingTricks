@@ -1,3 +1,6 @@
+.root{
+    height: calc(100%-20px);
+}
 h1{
     font-family: cursive;
     font-size: 30px;
@@ -27,4 +30,28 @@ h2{
             content: "- ";
         }
     }
+}
+.html--template{
+    background-color: black;
+    border: 10px solid blue;
+    padding: 20px 10px;
+    span{
+        display: inline-block;
+        transition: transform 2s;
+        font-size: 16px;
+        transform: translateY(0px);
+        color: silver;
+    }
+    span:hover ~ span {
+        transform: translateY(20px);
+        animation: colorChange 3s;
+    }
+    @keyframes colorChange{
+        from{color: silver;}
+        to{color:slateblue;}
+    }
+}
+
+.height28{
+    height: 28px;
 }
